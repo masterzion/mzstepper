@@ -41,6 +41,7 @@ class Stepper:
             GPIO.setup(pin,GPIO.OUT)
             GPIO.output(pin, False)
         self.thread = _thread.start_new_thread(self.MoveMotor, () )
+        return self.thread
 
 
     def SetPosPercent(self, NewPosPercent):
